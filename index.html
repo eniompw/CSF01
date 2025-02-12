@@ -1,0 +1,17 @@
+<label> Email: </label>
+<input id="input">
+<div id="output"> Please enter email </div>
+<button onclick="validate()"> Submit </button>
+<script>
+    function validate(){
+        let email = document.getElementById("input").value
+        let output = document.getElementById("output")
+
+        if (email.length == 0)
+            { output.innerHTML = "cannot be blank" }
+        else if (email.indexOf("@") < email.lastIndexOf("."))
+            { output.innerHTML = "email submitted" }
+        else
+            { output.innerHTML = "invalid email format" }
+    }
+</script>
